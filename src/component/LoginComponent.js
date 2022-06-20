@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../service/AuthService";
+import "./component.css";
 
 const LoginComponent = () => {
     const [username, setUsername] = useState("");
@@ -29,19 +30,27 @@ const LoginComponent = () => {
         <div>
             <form onSubmit={handleLogin}>
                 <h3>Login</h3>
-                <input
-                    type="text"
-                    placeholder="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                />
-                <input
-                    type="password"
-                    placeholder="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
-                <button type="submit">Log in</button>
+                <br></br>
+                <div className="input-group mb-3 login">
+                    <input
+                        type="text"
+                        placeholder="username"
+                        className="form-control"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                </div>
+                <div className="input-group mb-3 login">
+                    <input
+                        type="password"
+                        placeholder="password"
+                        className="form-control"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <br></br>
+                <button type="submit" className="btn btn-primary">Log in</button>
             </form>
         </div>
     );
