@@ -6,7 +6,7 @@ import HomeComponent from './HomeComponent';
 import LoginComponent from './LoginComponent';
 import VehicleComponent from './VehicleComponent';
 
-function NavComponent() {
+const NavComponent = () => {
     const [currentUser, setCurrentUser] = useState(undefined);
     useEffect(() => {
       const user = AuthService.getCurrentUser();
@@ -42,7 +42,7 @@ function NavComponent() {
           {currentUser ? (
             <div className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a href="/login" className="nav-link" onClick={logOut}>
+                <a href="/" className="nav-link" onClick={logOut}>
                   Logout
                 </a>
               </li>
