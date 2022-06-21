@@ -49,8 +49,7 @@ const VehicleComponent = () => {
             await vehicleService.addVehicle(make, model, color, year)
                 .then(
                     () => {
-                        navigate("/vehicles");
-                        window.location.reload();
+                        navigate("/");
                     },
                     (error) => {
                         console.log(error);
@@ -68,8 +67,7 @@ const VehicleComponent = () => {
             await vehicleService.updateVehicle(uuid, make, model, color, year)
                 .then(
                     () => {
-                        navigate("/vehicles");
-                        window.location.reload();
+                        navigate("/");
                     },
                     (error) => {
                         console.log(error);
@@ -85,8 +83,7 @@ const VehicleComponent = () => {
             await vehicleService.deleteVehicle(uuid)
                 .then(
                     () => {
-                        navigate("/vehicles");
-                        window.location.reload();
+                        navigate("/");
                     },
                     (error) => {
                         console.log(error);
